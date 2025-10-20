@@ -110,8 +110,8 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md border-b border-gray-800 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -122,7 +122,7 @@ const Index = () => {
                 <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                   Перспектива
                 </h1>
-                <p className="text-xs text-gray-500">Коммерческий колледж</p>
+                <p className="text-xs text-gray-400">Коммерческий колледж</p>
               </div>
             </div>
             <div className="hidden lg:flex gap-6">
@@ -130,8 +130,8 @@ const Index = () => {
                 <button
                   key={item.id}
                   onClick={() => setActiveSection(item.id)}
-                  className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all hover:bg-purple-50 ${
-                    activeSection === item.id ? 'bg-purple-100 text-purple-600' : 'text-gray-600'
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all hover:bg-purple-500/10 ${
+                    activeSection === item.id ? 'bg-purple-500/20 text-purple-400' : 'text-gray-300'
                   }`}
                 >
                   <Icon name={item.icon} size={16} />
@@ -150,10 +150,10 @@ const Index = () => {
         {activeSection === 'main' && (
           <>
             <section className="relative overflow-hidden py-20 lg:py-32">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500 opacity-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-pink-500/10 to-orange-500/20"></div>
               <div className="container mx-auto px-4 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  <div className="animate-fade-in">
+                  <div className="animate-fade-in text-center lg:text-left">
                     <Badge className="mb-4 bg-purple-100 text-purple-700 hover:bg-purple-200">
                       🎓 Набор 2025
                     </Badge>
@@ -163,10 +163,10 @@ const Index = () => {
                         успешной карьеры
                       </span>
                     </h1>
-                    <p className="text-xl text-gray-600 mb-8">
+                    <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
                       Получите востребованную профессию с гарантией трудоустройства. Современные программы обучения от практикующих специалистов.
                     </p>
-                    <div className="flex flex-wrap gap-4">
+                    <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                       <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-lg px-8">
                         Подать заявку
                         <Icon name="ArrowRight" size={20} className="ml-2" />
@@ -189,7 +189,7 @@ const Index = () => {
               </div>
             </section>
 
-            <section className="py-16 bg-white">
+            <section className="py-16 bg-gray-900/50">
               <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {features.map((feature, index) => (
@@ -209,13 +209,13 @@ const Index = () => {
               </div>
             </section>
 
-            <section className="py-20">
+            <section className="py-20 bg-gray-800/30">
               <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                   <h2 className="text-4xl lg:text-5xl font-bold mb-4">
                     Популярные специальности
                   </h2>
-                  <p className="text-xl text-gray-600">Выберите направление своего будущего</p>
+                  <p className="text-xl text-gray-300">Выберите направление своего будущего</p>
                 </div>
                 <div className="grid md:grid-cols-3 gap-8">
                   {specialties.map((specialty, index) => (
@@ -243,11 +243,11 @@ const Index = () => {
               </div>
             </section>
 
-            <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+            <section className="py-20 bg-gray-900/50">
               <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                  <h2 className="text-4xl lg:text-5xl font-bold mb-4">Последние новости</h2>
-                  <p className="text-xl text-gray-600">Будьте в курсе событий колледжа</p>
+                  <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-white">Последние новости</h2>
+                  <p className="text-xl text-gray-300">Будьте в курсе событий колледжа</p>
                 </div>
                 <div className="grid md:grid-cols-3 gap-6">
                   {news.map((item, index) => (
@@ -270,12 +270,12 @@ const Index = () => {
               </div>
             </section>
 
-            <section className="py-20 bg-white">
+            <section className="py-20 bg-gray-800/30">
               <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto">
                   <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-4">Частые вопросы</h2>
-                    <p className="text-xl text-gray-600">Ответы на самые популярные вопросы абитуриентов</p>
+                    <h2 className="text-4xl font-bold mb-4 text-white">Частые вопросы</h2>
+                    <p className="text-xl text-gray-300">Ответы на самые популярные вопросы абитуриентов</p>
                   </div>
                   <Accordion type="single" collapsible className="w-full">
                     {faq.map((item, index) => (
@@ -300,7 +300,7 @@ const Index = () => {
                   <p className="text-xl mb-8 opacity-90">
                     Оставьте заявку и наш специалист свяжется с вами для консультации
                   </p>
-                  <Card className="text-left">
+                  <Card className="text-left bg-gray-900/50 border-gray-700">
                     <CardContent className="pt-6 space-y-4">
                       <div className="grid md:grid-cols-2 gap-4">
                         <Input placeholder="Ваше имя" />
@@ -323,7 +323,7 @@ const Index = () => {
         {activeSection === 'about' && (
           <section className="py-20">
             <div className="container mx-auto px-4">
-              <h1 className="text-5xl font-bold mb-8 text-center">О колледже</h1>
+              <h1 className="text-5xl font-bold mb-8 text-center text-white">О колледже</h1>
               <div className="max-w-4xl mx-auto space-y-8">
                 <Card>
                   <CardHeader>
@@ -372,7 +372,7 @@ const Index = () => {
         {activeSection === 'applicant' && (
           <section className="py-20">
             <div className="container mx-auto px-4">
-              <h1 className="text-5xl font-bold mb-12 text-center">Абитуриенту</h1>
+              <h1 className="text-5xl font-bold mb-12 text-center text-white">Абитуриенту</h1>
               <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 <Card>
                   <CardHeader>
@@ -434,7 +434,7 @@ const Index = () => {
         {activeSection === 'students' && (
           <section className="py-20">
             <div className="container mx-auto px-4">
-              <h1 className="text-5xl font-bold mb-12 text-center">Студентам</h1>
+              <h1 className="text-5xl font-bold mb-12 text-center text-white">Студентам</h1>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 {[
                   { icon: 'Calendar', title: 'Расписание занятий', desc: 'Актуальное расписание всех групп' },
@@ -462,7 +462,7 @@ const Index = () => {
         {activeSection === 'process' && (
           <section className="py-20">
             <div className="container mx-auto px-4">
-              <h1 className="text-5xl font-bold mb-12 text-center">Учебный процесс</h1>
+              <h1 className="text-5xl font-bold mb-12 text-center text-white">Учебный процесс</h1>
               <div className="max-w-4xl mx-auto space-y-8">
                 <Card>
                   <CardHeader>
@@ -512,7 +512,7 @@ const Index = () => {
         {activeSection === 'news' && (
           <section className="py-20">
             <div className="container mx-auto px-4">
-              <h1 className="text-5xl font-bold mb-12 text-center">Новости и события</h1>
+              <h1 className="text-5xl font-bold mb-12 text-center text-white">Новости и события</h1>
               <div className="max-w-4xl mx-auto space-y-6">
                 {[...news, ...news].map((item, index) => (
                   <Card key={index} className="hover:shadow-xl transition-all">
@@ -538,7 +538,7 @@ const Index = () => {
         {activeSection === 'life' && (
           <section className="py-20">
             <div className="container mx-auto px-4">
-              <h1 className="text-5xl font-bold mb-12 text-center">Студенты вне учёбы</h1>
+              <h1 className="text-5xl font-bold mb-12 text-center text-white">Студенты вне учёбы</h1>
               <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 <Card>
                   <CardHeader>
@@ -584,7 +584,7 @@ const Index = () => {
         {activeSection === 'career' && (
           <section className="py-20">
             <div className="container mx-auto px-4">
-              <h1 className="text-5xl font-bold mb-12 text-center">Карьера и трудоустройство</h1>
+              <h1 className="text-5xl font-bold mb-12 text-center text-white">Карьера и трудоустройство</h1>
               <div className="max-w-6xl mx-auto space-y-8">
                 <Card>
                   <CardHeader>
